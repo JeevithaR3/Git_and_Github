@@ -4,7 +4,8 @@
 # from datetime import datetime
 # from pymongo import MongoClient
 
-# app = Flask(__name__)
+app = Flask(__name__)
+print("Starting AI Defender backend...")
 # CORS(app, resources={r"/*": {"origins": "*"}})  # Fix CORS issues
 
 # # Connect to MongoDB (adjust DB URI as needed)
