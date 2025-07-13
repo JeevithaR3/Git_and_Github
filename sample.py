@@ -4,17 +4,17 @@
 # from datetime import datetime
 # from pymongo import MongoClient
 
-# app = Flask(__name__)
-# CORS(app, resources={r"/*": {"origins": "*"}})  # Fix CORS issues
+app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})  # Fix CORS issues
 
-# # Connect to MongoDB (adjust DB URI as needed)
-# client = MongoClient("mongodb://localhost:27017/")
-# db = client["ai_defender"]
-# collection = db["toxic_messages"]
+# Connect to MongoDB (adjust DB URI as needed)
+client = MongoClient("mongodb://localhost:27017/")
+db = client["ai_defender"]
+collection = db["toxic_messages"]
 
-# # Load Models
-# bert_model = pipeline("text-classification", model="unitary/toxic-bert", top_k=None)
-# roberta_model = pipeline("text-classification", model="SkolkovoInstitute/roberta_toxicity_classifier", top_k=None)
+# Load Models
+bert_model = pipeline("text-classification", model="unitary/toxic-bert", top_k=None)
+roberta_model = pipeline("text-classification", model="SkolkovoInstitute/roberta_toxicity_classifier", top_k=None)
 
 # # Labels to check from RoBERTa model
 # roberta_labels = [
